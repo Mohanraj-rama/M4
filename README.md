@@ -10,15 +10,26 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
 
+int main() {
+    int num = 44; // Integer number
+    int shifts = 3; // Number of shifts
+    
+    // Perform left shift operation
+    int result = num << shifts;
+    
+    // Display the result
+    printf("Original number: %d\n", num);
+    printf("After left shifting by %d positions: %d\n", shifts, result);
+    
+    return 0;
+}
+```
 ## OUTPUT
 
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/6de26278-a11c-4ca1-9b5c-bcc33360877d)
 
 
 ## RESULT
@@ -70,11 +81,32 @@ Write a C Program to convert the given string into lowercase.
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
 
+int main() {
+    int num1, num2;
+    
+    // Input two numbers
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    
+    // Check if the numbers are equal
+    if(num1 == num2) {
+        printf("The two numbers are equal.\n");
+    } else {
+        printf("The two numbers are not equal.\n");
+    }
+    
+    return 0;
+}
+```
 ## OUTPUT
 
-
-
+![image](https://github.com/user-attachments/assets/e4aef182-2f9e-42f1-baf4-484706b4a90f)
 
 ## RESULT
 Thus the program to convert the given string into lowercase has been executed successfully
@@ -95,11 +127,37 @@ Write a C Program to count the total number of words in a given string using do 
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+#include <ctype.h>  // For checking if character is a space
 
+int main() {
+    char str[100];
+    int i = 0, wordCount = 0;
+    
+    // Input the string
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin); // Read a line of text including spaces
+    
+    // Use do-while loop to traverse through the string
+    do {
+        // If current character is not a space and it is the first character or after a space, it's the start of a word
+        if (i == 0 || str[i-1] == ' ') {
+            if (str[i] != ' ' && str[i] != '\n' && str[i] != '\0') {
+                wordCount++; // Increment word count if it starts a word
+            }
+        }
+        i++; // Move to the next character
+    } while(str[i-1] != '\0'); // Loop until the null terminator is reached
+    
+    // Output the word count
+    printf("Total number of words: %d\n", wordCount);
+    
+    return 0;
+}
+```
 ## OUTPUT
-
-
-
+![image](https://github.com/user-attachments/assets/5860a386-e690-4c32-b0da-38d11e3e2603)
 
 
 ## RESULT
@@ -129,9 +187,47 @@ Step 7: After the loop, check the value of flag:
 Step 8: End the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
 
-
+int main() {
+    char str1[100], str2[100];
+    int i = 0, result = 0;
+    
+    // Input two strings
+    printf("Enter first string: ");
+    fgets(str1, sizeof(str1), stdin); // Read the first string
+    
+    printf("Enter second string: ");
+    fgets(str2, sizeof(str2), stdin); // Read the second string
+    
+    // Compare each character of the strings
+    while(str1[i] != '\0' && str2[i] != '\0') {
+        if(str1[i] != str2[i]) {
+            result = 1; // Strings are not equal
+            break;
+        }
+        i++;
+    }
+    
+    // If the lengths of the strings are different, set result as 1
+    if(str1[i] != str2[i]) {
+        result = 1;
+    }
+    
+    // Output the result
+    if(result == 0) {
+        printf("The two strings are equal.\n");
+    } else {
+        printf("The two strings are not equal.\n");
+    }
+    
+    return 0;
+}
+```
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/fa87894c-503d-4d21-ad4b-03a1a0e49cea)
+
  
 
 ## RESULT
