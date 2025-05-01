@@ -58,10 +58,23 @@ Write a C Program to check whether the two numbers are equal or not using simple
 5.	Stop the program.
 
 ## PROGRAM
-
+```
+#include <stdio.h>
+int main() {
+int num1, num2;
+printf("Enter two numbers: ");
+scanf("%d %d", &num1, &num2);
+if (num1 == num2) {
+printf("Both numbers are equal.\n");
+} else {
+print("Both numbers are not equal.\n");
+}
+return 0;
+}
+```
 
 ## OUTPUT
-           
+ ![image](https://github.com/user-attachments/assets/6cd25148-9eb6-48e1-ba11-7bc801926012)          
 ## RESULT
 
 Thus the program to check whether the two numbers are equal or not using simple if statement has been executed successfully
