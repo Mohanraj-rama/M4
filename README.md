@@ -238,8 +238,8 @@ int compare(char a[],char b[])
 ```
 
 ## OUTPUT
- ![image](https://github.com/user-attachments/assets/6c0be691-4327-4fce-8ecc-7c1f4c6afadd)
-
+ 
+![image](https://github.com/user-attachments/assets/6c0be691-4327-4fce-8ecc-7c1f4c6afadd)
 
 ## RESULT
 Thus the C Program to compare two strings without using strcmp() has been executed successfully.
